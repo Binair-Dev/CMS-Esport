@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { COPYRIGHT } from '../../../_config/lang';
 
 class Copyright extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class Copyright extends Component {
         return (
             <>
                 <div class="copyright py-4 text-center text-white">
-                    <div class="container"><small>Copyright &copy; CMS Esport 2021-2022</small></div>
+                    <div class="container"><small>{COPYRIGHT} &copy; {localStorage.getItem("Title")} {new Date().getFullYear() !== 2021 ? "2021-" + new Date().getFullYear() : new Date().getFullYear()}</small></div>
                 </div>
             </>
         );

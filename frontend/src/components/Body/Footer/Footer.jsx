@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FOOTER_ABOUT, FOOTER_LOCATION, FOOTER_USEFULL_LINKS, LOCATION } from '../../../_config/lang';
 
 class Footer extends Component {
     constructor(props) {
@@ -12,26 +13,23 @@ class Footer extends Component {
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-4 mb-5 mb-lg-0">
-                                    <h4 class="text-uppercase mb-4">Location</h4>
+                                    <h4 class="text-uppercase mb-4">{FOOTER_LOCATION}</h4>
                                     <p class="lead mb-0">
-                                        Adresse Rue/Numero
+                                        {localStorage.getItem("Title")}
                                         <br />
-                                        Pays, Code postal
+                                        {localStorage.getItem("Rue")} {localStorage.getItem("Numero")}
+                                        <br />
+                                        {localStorage.getItem("CodePostal")} {localStorage.getItem("Pays")}
                                     </p>
                                 </div>
                                 <div class="col-lg-4 mb-5 mb-lg-0">
-                                    <h4 class="text-uppercase mb-4">Liens utiles</h4>
-                                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                                    <h4 class="text-uppercase mb-4">{FOOTER_USEFULL_LINKS}</h4>
+                                    {/* TODO: Une bdd avec les liens utiles */}
                                 </div>
                                 <div class="col-lg-4">
-                                    <h4 class="text-uppercase mb-4">A Propos</h4>
+                                    <h4 class="text-uppercase mb-4">{FOOTER_ABOUT}</h4>
                                     <p class="lead mb-0">
-                                        Ceci est un CMS base sur le millieu sportif/e-sportif
-                                        <a href="http://cmsesport.com"> CMS Esport</a>
-                                        .
+                                        {localStorage.getItem("Apropos")}
                                     </p>
                                 </div>
                             </div>
