@@ -9,5 +9,6 @@ db.url = dbConfig.url;
 
 db.user = require("./user.model.js")(mongoose);
 db.details = require("./details.model.js")(mongoose);
+db.navbarbutton = require("./navbar-button.model.js")(mongoose);
 
 module.exports = db;

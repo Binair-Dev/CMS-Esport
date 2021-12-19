@@ -31,6 +31,7 @@ app.get("/", (req, res) => {
 require("./app/routes/user.routes")(app);
 require("./app/routes/login.routes")(app);
 require("./app/routes/details.routes")(app);
+require("./app/routes/navbar-button.routes")(app);
 
 const PORT = process.env.PORT || 5400;
 app.listen(PORT, () => {
