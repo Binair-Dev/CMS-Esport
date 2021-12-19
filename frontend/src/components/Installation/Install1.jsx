@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 import { getApiURL } from '../../_config/config';
-import { ALERT_INSTALL_SUCCESS, BTN_NEXT, BTN_VALID, PLACEHOLDER_WEBSITE_ABOUT, PLACEHOLDER_WEBSITE_COUNTRY, PLACEHOLDER_WEBSITE_DESCRIPTION, PLACEHOLDER_WEBSITE_NAME, PLACEHOLDER_WEBSITE_NUMBER, PLACEHOLDER_WEBSITE_NUMERO, PLACEHOLDER_WEBSITE_POSTAL_CODE, PLACEHOLDER_WEBSITE_STREET, SUB_TITLE_INSTALL_PART_1, TITLE_INSTALL_PART_1 } from '../../_config/lang';
+import { ALERT_INSTALL_SUCCESS, BTN_NEXT, BTN_VALID, PLACEHOLDER_WEBSITE_ABOUT, PLACEHOLDER_WEBSITE_COUNTRY, PLACEHOLDER_WEBSITE_DESCRIPTION, PLACEHOLDER_WEBSITE_NAME, PLACEHOLDER_WEBSITE_NUMBER, PLACEHOLDER_WEBSITE_NUMERO, PLACEHOLDER_WEBSITE_POSTAL_CODE, PLACEHOLDER_WEBSITE_STREET, SUB_TITLE_INSTALL_PART_1, TITLE_INSTALL_ADRESS, TITLE_INSTALL_INFORMATION, TITLE_INSTALL_OTHER, TITLE_INSTALL_PART_1 } from '../../_config/lang';
 
 import Copyright from '../Body/Copyright/Copyright';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import '../styles.css'
 
 const Install1 = () => {
 
@@ -81,7 +82,7 @@ const Install1 = () => {
                         </div>
 
                         <div class="text-center">
-                            <h5>Informations</h5>
+                            <h5>{TITLE_INSTALL_INFORMATION}</h5>
                         </div>
 
                         <div class="form-label-group text-center">
@@ -95,7 +96,7 @@ const Install1 = () => {
                         </div>
 
                         <div class="text-center">
-                            <h5>Adresse</h5>
+                            <h5>{TITLE_INSTALL_ADRESS}</h5>
                         </div>
 
                         <div class="form-label-group text-center">
@@ -120,7 +121,7 @@ const Install1 = () => {
                         </div>
 
                         <div class="text-center">
-                            <h5>Complémentaire</h5>
+                            <h5>{TITLE_INSTALL_OTHER}</h5>
                         </div>
 
                         <div class="form-label-group text-center">

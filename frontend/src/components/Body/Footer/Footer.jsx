@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FOOTER_ABOUT, FOOTER_LOCATION, FOOTER_USEFULL_LINKS, LOCATION } from '../../../_config/lang';
+import '../../../components/styles.css'
 
 class Footer extends Component {
     constructor(props) {

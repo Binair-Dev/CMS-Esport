@@ -4,7 +4,7 @@ const User = db.user;
 
 exports.login = async (req, res) => {
 
-  User.findOne({Email: req.body.Email}).then((data) => {
+  User.findOne({Pseudo: req.body.Pseudo}).then((data) => {
 
     let user = {
       _id: data._id,
@@ -17,7 +17,7 @@ exports.login = async (req, res) => {
     }
     
     if(user !== null) {
-      if(req.body.Email !== user.Email) {
+      if(req.body.Pseudo !== user.Pseudo) {
         res.status(401).send('Invalid credentials')
         return;
       }
@@ -32,5 +32,7 @@ exports.login = async (req, res) => {
     else {
       res.status(404).send("Not found")
     }
+  }).catch(error => {
+    res.status(404).send("Not found")
   })
 }

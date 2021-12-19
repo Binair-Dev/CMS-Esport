@@ -3,6 +3,7 @@ import Nav from './Nav/Nav';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Copyright from './Copyright/Copyright';
+import '../styles.css'
 
 class Body extends Component {
     constructor(props) {

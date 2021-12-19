@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import avatar from "../../../assets/img/avataaars.svg";
+import '../../../components/styles.css'
 
 class Header extends Component {
     constructor(props) {

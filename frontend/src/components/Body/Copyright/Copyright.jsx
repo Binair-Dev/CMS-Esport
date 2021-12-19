@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { COPYRIGHT } from '../../../_config/lang';
+import '../../../components/styles.css'
 
 class Copyright extends Component {
     constructor(props) {

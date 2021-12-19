@@ -1,20 +1,17 @@
-import Body from "./components/Body/Body";
-import Head from "./components/Head/Head";
-import Install1 from "./components/Installation/Install1";
-import Install2 from "./components/Installation/Install2";
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { getApiURL } from "./_config/config";
+import './components/styles.css'
 
-function App() {
+import Routes from "./components/Routes/Routes";
 
-  const [isInstalled, setInstalled] = useState(false);
+const App = () => {
+
+  const [isInstalled, setInstalled] = useState(true);
 
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
   
   useEffect(() => {
     setLoading(true);
@@ -39,26 +36,10 @@ function App() {
     })
   }, isInstalled);
 
-  return (
-    <>
-    {!isInstalled ? 
-    <>
-      {/* Need to install */}
-      <Router>
-        <Routes>
-          <Route exact path='/install1' element={<Install1/>}></Route>
-          <Route exact path='/install2' element={<Install2/>}></Route>
-        </Routes>
-      </Router>
-    </> 
-    :
-    <>
-      {/* Base Website */}    
-      <Head/>
-      <Body/>
-    </>
-    }
-    </>
+  return(
+    <Router>
+      <Routes isInstalled={isInstalled}/>
+    </Router>
   );
 }
 

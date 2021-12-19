@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Copyright from '../Body/Copyright/Copyright';
 import axios from 'axios'
 import { sha256 } from '../../_tools/password-hash';
+import '../styles.css'
 
 
 const Install2 = () => {
@@ -63,6 +64,10 @@ const Install2 = () => {
         }
     }
 
+    const refreshPage = () => {
+        window.location.reload()
+        window.location.pathname = "/";
+    }
     
     return (
         <>
@@ -70,7 +75,7 @@ const Install2 = () => {
         <>
         <div class="container mt-5 mb-5 d-flex justify-content-center color-green text-center">
             <div class="alert alert-success" role="alert">
-            {ALERT_INSTALL_SUCCESS}<Link to="/" style={{marginLeft:'10px'}} type="button" class="btn btn-success">{BTN_NEXT}</Link>
+            {ALERT_INSTALL_SUCCESS}<button style={{marginLeft:'10px'}} type="button" class="btn btn-success" onClick={refreshPage}>{BTN_NEXT}</button>
             </div>
         </div>
         </> : 
