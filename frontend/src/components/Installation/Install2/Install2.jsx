@@ -4,7 +4,7 @@ import { getApiURL } from '../../_config/config';
 import { ALERT_INSTALL_PASSWORD_NOT_EQUALS, ALERT_INSTALL_SUCCESS, BTN_NEXT, BTN_VALID, PLACEHOLDER_EMAIL, PLACEHOLDER_FIRSTNAME, PLACEHOLDER_LASTNAME, PLACEHOLDER_PASSWORD, PLACEHOLDER_PASSWORD_CONFIRM, PLACEHOLDER_USERNAME, PLACEHOLDER_WEBSITE_DESCRIPTION, PLACEHOLDER_WEBSITE_NAME, SUB_TITLE_INSTALL_PART_1, SUB_TITLE_INSTALL_PART_2, TITLE_INSTALL_PART_1, TITLE_INSTALL_PART_2 } from '../../_config/lang';
 import { Link } from 'react-router-dom';
 
-import Copyright from '../Body/Copyright/Copyright';
+import Copyright from '../theme/Body/Copyright/Copyright';
 import axios from 'axios'
 import { sha256 } from '../../_tools/password-hash';
 import '../styles.css'
