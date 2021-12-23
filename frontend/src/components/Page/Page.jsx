@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import NotFound from '../NotFound/NotFound';
 
-const Index = ({navbar, selected, footer}) => {
+const Page = ({navbar, selected, footer}) => {
     return ( 
     <>
         <head>
@@ -24,10 +24,9 @@ const Index = ({navbar, selected, footer}) => {
             <header class="masthead">
                 {selected != null ? selected : <NotFound />}
             </header>
-            {footer != null ? <Footer/> : null}
         </body>
     </>
     );
 }
  
-export default Index;
+export default Page;

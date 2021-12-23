@@ -1,16 +1,18 @@
 import { Link, useRoutes } from 'react-router-dom';
 import { ALERT_NOT_INSTALL, BTN_NEXT } from '../../_config/lang';
-import Footer from '../Footer/Footer';
-import Index from '../Index/Index';
+import Home from '../Home/Home';
 import Install1 from '../Installation/Install1';
 import Install2 from '../Installation/Install2';
+import Login from '../Login/Login';
+import Logout from '../Logout/Logout';
 import Navbar from '../Navbar/Navbar';
+import Page from '../Page/Page';
 
 const Routes = ({isInstalled}) => {
     let routes = useRoutes([
         { path: "/", element: <>{isInstalled ? 
         <>
-            <Index navbar={<Navbar/>} footer={<Footer/>}/>
+            <Page navbar={<Navbar/>} selected={<Home/>}/>
         </> : 
         <>
             <div class="container mt-5 mb-5 d-flex justify-content-center color-green text-center">
@@ -20,8 +22,10 @@ const Routes = ({isInstalled}) => {
                 </div>
             </div>
         </>}</> },
-        { path: "install1", element: <Index selected={<Install1 />}/> },
-        { path: "install2", element: <Index selected={<Install2 />}/> },
+        { path: "install1", element: <Page selected={<Install1 />}/> },
+        { path: "install2", element: <Page selected={<Install2 />}/> },
+        { path: "login", element: <Page navbar={<Navbar/>} selected={<Login />}/> },
+        { path: "logout", element: <Page navbar={<Navbar/>} selected={<Logout />}/> },
       ]);
       return routes;
 }
