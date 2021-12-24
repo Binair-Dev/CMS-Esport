@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
-import { getApiURL } from '../../_config/config';
-import { ALERT_LOG_IN_FAIL, ALERT_LOG_IN_SUCCESS, BTN_LOG_IN, PLACEHOLDER_LOGIN_USERNAME, PLACEHOLDER_PASSWORD, TITLE_LOGIN } from '../../_config/lang';
-
-import Copyright from '../Body/Copyright/Copyright';
-import axios from 'axios'
-import Nav from '../Body/Nav/Nav';
-import { sha256 } from '../../_tools/password-hash';
-import '../styles.css'
-import Head from '../Head/Head';
-import Header from '../Body/Header/Header';
-import Footer from '../Body/Footer/Footer';
+import Footer from "../Footer/Footer";
+import { ALERT_LOG_IN_FAIL, ALERT_LOG_IN_SUCCESS, BTN_LOG_IN, PLACEHOLDER_LOGIN_USERNAME, PLACEHOLDER_PASSWORD, TITLE_LOGIN } from "../../_config/lang";
+import axios from "axios";
+import { getApiURL } from "../../_config/config";
+import { useState } from "react";
+import { sha256 } from "../../_tools/password-hash";
 
 const Login = () => {
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -51,8 +43,6 @@ const Login = () => {
 
     return (
         <>
-        <Head /> 
-        <Nav />
         {success === 0 ?
         <>
         <div class="container mt-5 mb-5 justify-content-center" style={{width: "500px", paddingTop: "100px"}}>
@@ -82,7 +72,6 @@ const Login = () => {
             </div>
         </div>
         <Footer/>
-        <Copyright/>
         </>
         : 
         <>
@@ -128,7 +117,6 @@ const Login = () => {
             </div>
         </div>
         <Footer/>
-        <Copyright/>
         </>
         }</>
     );

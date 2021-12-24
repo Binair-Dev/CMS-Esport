@@ -1,8 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios'
 import { getApiURL } from "./_config/config";
-import './components/styles.css'
 
 import Routes from "./components/Routes/Routes";
 
