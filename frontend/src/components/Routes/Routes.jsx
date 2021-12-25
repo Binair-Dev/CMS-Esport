@@ -1,5 +1,6 @@
 import { Link, useRoutes } from 'react-router-dom';
 import { ALERT_NOT_INSTALL, BTN_NEXT } from '../../_config/lang';
+import Admin from '../Admin/Admin';
 import Home from '../Home/Home';
 import Install1 from '../Installation/Install1';
 import Install2 from '../Installation/Install2';
@@ -26,6 +27,7 @@ const Routes = ({isInstalled}) => {
         { path: "install2", element: <Page selected={<Install2 />}/> },
         { path: "login", element: <Page navbar={<Navbar/>} selected={<Login />}/> },
         { path: "logout", element: <Page navbar={<Navbar/>} selected={<Logout />}/> },
+        { path: "admin", element: <Page navbar={<Navbar/>} selected={<Admin />}/> },
       ]);
       return routes;
 }

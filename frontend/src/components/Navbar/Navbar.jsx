@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { getApiURL } from "../../_config/config";
+import { BTN_LOG_IN, BTN_LOG_OUT } from "../../_config/lang";
 
 const Navbar = () => {
         const [isLoading, setLoading] = useState(false);
@@ -30,8 +31,8 @@ const Navbar = () => {
                             {buttons.sort((a, b) => (a.Ordre - b.Ordre)).map(function (i) {
                                 return <li class="nav-item"><a class="nav-link" href={i.Chemin}>{i.Nom}</a></li>;})
                             }
-                            {localStorage.getItem("accessToken") === null && <li class="nav-item"><a class="nav-link" href="/login">Connexion</a></li>}
-                            {localStorage.getItem("accessToken") !== null && <li class="nav-item"><a class="nav-link" href="/logout">Déconnexion</a></li>}
+                            {localStorage.getItem("accessToken") === null && <li class="nav-item"><a class="nav-link" href="/login">{BTN_LOG_IN}</a></li>}
+                            {localStorage.getItem("accessToken") !== null && <li class="nav-item"><a class="nav-link" href="/logout">{BTN_LOG_OUT}</a></li>}
                         </ul>
                     </div>
                 </div>
