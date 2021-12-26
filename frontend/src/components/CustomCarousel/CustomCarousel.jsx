@@ -1,4 +1,5 @@
 import { Carousel } from "react-bootstrap";
+import { CAROUSEL_DESCRIPTION_1, CAROUSEL_DESCRIPTION_2, CAROUSEL_TITLE_1, CAROUSEL_TITLE_2 } from "../../_config/lang";
 import carousel1 from '../assets/img/carousel1.jpg'
 import carousel2 from '../assets/img/carousel2.jpg'
 
@@ -14,8 +15,8 @@ const CustomCarousel = () => {
                     alt="Premier carousel"
                     />
                     <Carousel.Caption>
-                    <h3>Premier carousel</h3>
-                    <p>Premier carousel: description.</p>
+                    <h3>{CAROUSEL_TITLE_1}</h3>
+                    <p>{CAROUSEL_DESCRIPTION_1}</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -26,8 +27,8 @@ const CustomCarousel = () => {
                     />
 
                     <Carousel.Caption>
-                    <h3>Deuxième carousel</h3>
-                    <p>Deuxième carousel: description.</p>
+                    <h3>{CAROUSEL_TITLE_2}</h3>
+                    <p>{CAROUSEL_DESCRIPTION_2}</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

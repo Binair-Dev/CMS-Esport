@@ -8,11 +8,6 @@ const Install1 = () => {
 
     const [nom, setNom] = useState('');
     const [desc, setDesc] = useState('');
-    const [rue, setRue] = useState('');
-    const [numero, setNumero] = useState('');
-    const [pays, setPays] = useState('');
-    const [codePostal, setCodePostal] = useState('');
-    const [apropos, setApropos] = useState('');
 
     const [isLoading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -41,11 +36,6 @@ const Install1 = () => {
             axios.post(getApiURL() + "details/install", {
                 Title: nom, 
                 Description: desc,
-                Rue: rue,
-                Numero: numero,
-                Pays: pays,
-                CodePostal: codePostal,
-                Apropos: apropos
             }).then(response => {
                 setSuccess(response.status)
             }).catch(e => {
@@ -88,40 +78,6 @@ const Install1 = () => {
 
                         <div class="form-label-group text-center">
                             <input value={desc} onChange={(e) => setDesc(e.target.value)} type="text" id="inputText" class="form-control" placeholder={PLACEHOLDER_WEBSITE_DESCRIPTION} required></input>
-                            <br/>
-                        </div>
-
-                        <div class="text-center">
-                            <h5>{TITLE_INSTALL_ADRESS}</h5>
-                        </div>
-
-                        <div class="form-label-group text-center">
-                            <input value={rue} onChange={(e) => setRue(e.target.value)} type="text" id="inputText" class="form-control" placeholder={PLACEHOLDER_WEBSITE_STREET} required></input>
-                            <br/>
-                        </div>
-
-                                                
-                        <div class="form-label-group text-center">
-                            <input value={numero} onChange={(e) => setNumero(e.target.value)} type="text" id="inputText" class="form-control" placeholder={PLACEHOLDER_WEBSITE_NUMBER} required></input>
-                            <br/>
-                        </div>
-
-                        <div class="form-label-group text-center">
-                            <input value={pays} onChange={(e) => setPays(e.target.value)} type="text" id="inputText" class="form-control" placeholder={PLACEHOLDER_WEBSITE_COUNTRY} required></input>
-                            <br/>
-                        </div>
-
-                        <div class="form-label-group text-center">
-                            <input value={codePostal} onChange={(e) => setCodePostal(e.target.value)} type="text" id="inputText" class="form-control" placeholder={PLACEHOLDER_WEBSITE_POSTAL_CODE} required></input>
-                            <br/>
-                        </div>
-
-                        <div class="text-center">
-                            <h5>{TITLE_INSTALL_OTHER}</h5>
-                        </div>
-
-                        <div class="form-label-group text-center">
-                            <input value={apropos} onChange={(e) => setApropos(e.target.value)} type="text" id="inputText" class="form-control" placeholder={PLACEHOLDER_WEBSITE_ABOUT} required></input>
                             <br/>
                         </div>
 

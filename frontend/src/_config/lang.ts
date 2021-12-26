@@ -1,3 +1,6 @@
+export const DEFAULT_WEBSITE_NAME = "CMS Esport";
+export const DEFAULT_WEBSITE_DESCRIPTION = "Description par défaut";
+
 export const TITLE_INSTALL_PART_1 = "Installation | Partie 1"
 export const TITLE_INSTALL_PART_2 = "Installation | Partie 2"
 export const TITLE_INSTALL_INFORMATION = "Informations"
@@ -27,6 +30,7 @@ export const BTN_NEXT = "Suivant"
 export const BTN_VALID = "Valider"
 export const BTN_LOG_IN = "Connexion"
 export const BTN_LOG_OUT = "Déconnexion"
+export const BTN_ADMIN = "Administration"
 
 export const ALERT_INSTALL_SUCCESS = "Installation réussie ! Veuillez passer a l'étape suivante !"
 export const ALERT_INSTALL_PASSWORD_NOT_EQUALS = "Erreur, les mots de passe ne correspondent pas !"
@@ -40,3 +44,9 @@ export const COPYRIGHT = "Copyright";
 export const FOOTER_LOCATION = "Location";
 export const FOOTER_USEFULL_LINKS = "Liens utiles";
 export const FOOTER_ABOUT = "A Propos";
+
+export const CAROUSEL_TITLE_1 = "Premier carousel";
+export const CAROUSEL_TITLE_2 = "Deuxième carousel";
+
+export const CAROUSEL_DESCRIPTION_1 = "Premier carousel: description.";
+export const CAROUSEL_DESCRIPTION_2 = "Deuxième carousel: description.";

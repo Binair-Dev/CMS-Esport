@@ -8,11 +8,6 @@ exports.install = async (req, res) => {
       let detail = new Details({
           Title: req.body.Title,
           Description: req.body.Description,
-          Rue: req.body.Rue,
-          Numero: req.body.Numero,
-          Pays: req.body.Pays,
-          CodePostal: req.body.CodePostal,
-          Apropos: req.body.Apropos
         });
 
       if(data.length === 0) {
@@ -51,11 +46,6 @@ exports.update = async (req, res) => {
         let detail = new Details({
             Title: req.body.Title,
             Description: req.body.Description,
-            Rue: req.body.Rue,
-            Numero: req.body.Numero,
-            Pays: req.body.Pays,
-            CodePostal: req.body.CodePostal,
-            Apropos: req.body.Apropos
           });
         data[0].updateOne({
             Title: detail.Title, 
