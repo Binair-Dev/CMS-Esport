@@ -3,11 +3,6 @@ module.exports = mongoose => {
       {
         Title: String,
         Description: String,
-        Rue: String,
-        Numero: String,
-        Pays: String,
-        CodePostal: String,
-        Apropos: String,
       },{
         versionKey: false,
         collection: "details",

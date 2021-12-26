@@ -20,13 +20,7 @@ const App = () => {
             setInstalled(false);
         } else {
           setInstalled(true);
-          localStorage.setItem("Title", response.data[0].Title);
-          localStorage.setItem("Description", response.data[0].Description);
-          localStorage.setItem("Rue", response.data[0].Rue);
-          localStorage.setItem("Numero", response.data[0].Numero);
-          localStorage.setItem("Pays", response.data[0].Pays);
-          localStorage.setItem("CodePostal", response.data[0].CodePostal);
-          localStorage.setItem("Apropos", response.data[0].Apropos);
+          localStorage.setItem("informations", JSON.stringify(response.data[0]));
         }
     }).catch(e => {
         setError(e.error)

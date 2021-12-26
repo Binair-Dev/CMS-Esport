@@ -30,6 +30,7 @@ export const BTN_NEXT = "Suivant"
 export const BTN_VALID = "Valider"
 export const BTN_LOG_IN = "Connexion"
 export const BTN_LOG_OUT = "Déconnexion"
+export const BTN_ADMIN = "Administration"
 
 export const ALERT_INSTALL_SUCCESS = "Installation réussie ! Veuillez passer a l'étape suivante !"
 export const ALERT_INSTALL_PASSWORD_NOT_EQUALS = "Erreur, les mots de passe ne correspondent pas !"
