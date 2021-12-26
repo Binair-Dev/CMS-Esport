@@ -4,11 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: [
-    './login.component.scss',
     '../../assets/css/bootstrap.min.css',
     '../../assets/css/font-awesome.min.css',
     '../../assets/css/bootstrap-theme.css',
-    '../../assets/css/main.css']})
+    '../../assets/css/main.css',
+    './login.component.scss']})
 export class LoginComponent implements OnInit {
 
   constructor() { }
